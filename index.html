@@ -1,39 +1,93 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <title>Lanchonete • Início</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lanchonete - Faça seu Pedido</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <!-- NAVBAR -->
-    <header>
-        <nav class="navbar">
-            <h1 class="logo">Pizza <span>Planet</span></h1>
-            <ul class="menu">
-                <li><a href="index.html">Início</a></li>
-                <li><a href="cardapio.html">Cardápio</a></li>
-                <li><a href="sobre.html">Sobre</a></li>
-                <li><a href="contato.html">Contato</a></li>
-            </ul>
-        </nav>
+
+    <!-- ================= HERO ================= -->
+    <header class="hero">
+        <h1>Lanchonete Delícia</h1>
+        <p>Peça seu lanche agora mesmo!</p>
+        <a href="#cardapio" class="btn">Ver Cardápio</a>
     </header>
 
-    <!-- HERO -->
-    <section class="hero">
-        <h2>Bem-vindo à nossa Lanchonete!</h2>
-        <p>Os melhores lanches da região com entrega rápida.</p>
+    <!-- ================= CARDÁPIO ================= -->
+    <main id="cardapio">
 
-        <div class="hero-buttons">
-            <a href="cardapio.html" class="btn">Ver Cardápio</a>
-            <a href="https://wa.me/55SEU_NUMERO" class="btn btn-wpp">Pedir no WhatsApp</a>
-        </div>
-    </section>
+        <!-- Hambúrgueres -->
+        <section class="categoria">
+            <h2>Hambúrgueres</h2>
+            <div class="produtos">
 
-    <!-- FOOTER -->
-    <footer>
-        <p>© 2025 Lanchonete — Todos os direitos reservados.</p>
-    </footer>
+                <div class="item">
+                    <img src="https://via.placeholder.com/150" alt="X-Burguer">
+                    <h3>X-Burguer</h3>
+                    <p class="preco">R$ 12,00</p>
+                    <button class="add" data-nome="X-Burguer" data-preco="12">Adicionar</button>
+                </div>
+
+                <div class="item">
+                    <img src="https://via.placeholder.com/150" alt="X-Salada">
+                    <h3>X-Salada</h3>
+                    <p class="preco">R$ 14,00</p>
+                    <button class="add" data-nome="X-Salada" data-preco="14">Adicionar</button>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Bebidas -->
+        <section class="categoria">
+            <h2>Bebidas</h2>
+            <div class="produtos">
+
+                <div class="item">
+                    <img src="https://via.placeholder.com/150" alt="Coca-Cola">
+                    <h3>Coca-Cola</h3>
+                    <p class="preco">R$ 6,00</p>
+                    <button class="add" data-nome="Coca-Cola" data-preco="6">Adicionar</button>
+                </div>
+
+                <div class="item">
+                    <img src="https://via.placeholder.com/150" alt="Suco de Laranja">
+                    <h3>Suco de Laranja</h3>
+                    <p class="preco">R$ 7,00</p>
+                    <button class="add" data-nome="Suco de Laranja" data-preco="7">Adicionar</button>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Combos -->
+        <section class="categoria">
+            <h2>Combos</h2>
+            <div class="produtos">
+
+                <div class="item">
+                    <img src="https://via.placeholder.com/150" alt="Combo X-Burguer">
+                    <h3>Combo X-Burguer</h3>
+                    <p class="preco">R$ 18,00</p>
+                    <button class="add" data-nome="Combo X-Burguer" data-preco="18">Adicionar</button>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ================= CARRINHO ================= -->
+    <aside id="carrinho">
+        <h2>Seu Pedido</h2>
+        <ul id="lista-carrinho"></ul>
+
+        <p class="total">Total: R$ <span id="total">0.00</span></p>
+
+        <a id="whatsapp-btn" class="finalizar" target="_blank">Enviar pelo WhatsApp</a>
+    </aside>
+
 </body>
 </html>
