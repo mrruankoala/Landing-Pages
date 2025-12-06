@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Lanchonete • Cardápio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <header>
+        <nav class="navbar">
+            <h1 class="logo">Lanchonete</h1>
+            <ul class="menu">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="cardapio.html" class="active">Cardápio</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- CATEGORIAS -->
+    <main class="cardapio">
+        <h2>Cardápio</h2>
+
+        <section class="categoria">
+            <h3>🍔 Hambúrgueres</h3>
+            <div class="itens">
+                <div class="item">
+                    <h4>Cheeseburger</h4>
+                    <p>R$ 15,00</p>
+                    <button onclick="addCarrinho('Cheeseburger', 15)">Adicionar</button>
+                </div>
+
+                <div class="item">
+                    <h4>Bacon Burger</h4>
+                    <p>R$ 20,00</p>
+                    <button onclick="addCarrinho('Bacon Burger', 20)">Adicionar</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="categoria">
+            <h3>🥤 Bebidas</h3>
+            <div class="itens">
+                <div class="item">
+                    <h4>Refrigerante Lata</h4>
+                    <p>R$ 6,00</p>
+                    <button onclick="addCarrinho('Refrigerante Lata', 6)">Adicionar</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- CARRINHO LATERAL -->
+    <aside class="carrinho">
+        <h3>🛒 Seu Carrinho</h3>
+        <ul id="listaCarrinho"></ul>
+        <p>Total: R$ <span id="totalCarrinho">0</span></p>
+
+        <button class="btn" onclick="enviarWhatsApp()">
+            Enviar Pedido no WhatsApp
+        </button>
+    </aside>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2025 Lanchonete — Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
